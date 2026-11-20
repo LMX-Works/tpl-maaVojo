@@ -1,0 +1,68 @@
+:root {
+  /* Font Families */
+  --mv-font-heading: 'Manrope', sans-serif;
+  --mv-font-body: 'Source Sans 3', sans-serif;
+
+  /* Font Weights */
+  --mv-font-weight-light: 300;
+  --mv-font-weight-regular: 400;
+  --mv-font-weight-medium: 500;
+  --mv-font-weight-semibold: 600;
+  --mv-font-weight-bold: 700;
+}
+
+/* =========================================
+   maavojo – Typography
+   ========================================= */
+
+/* Grundtypografie */
+body {
+  font-family: var(--mv-font-body);
+  font-weight: var(--mv-font-weight-regular);
+}
+
+/* Überschriften */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--mv-font-heading);
+  font-weight: var(--mv-font-weight-semibold);
+}
+
+/* Fließtext */
+p,
+li,
+blockquote {
+  font-family: var(--mv-font-body);
+}
+
+/* Navigation */
+.site-header__navigation,
+.footer-navigation {
+  font-family: var(--mv-font-body);
+  font-weight: var(--mv-font-weight-medium);
+}
+
+/* Branding */
+.mv-brand__first,
+.mv-brand__second,
+.mv-fob-brand-first,
+.v-fob-brand-second{
+  font-family: var(--mv-font-heading);
+  font-weight: var(--mv-font-weight-bold);
+}
+
+.footer__heading{
+
+    font-family: var(--mv-font-heading);
+}
+
+.hero-site__title_fir{
+   font-family: var(--mv-font-heading);
+   font-weight: var(--mv-font-weight-semibold);
+
+
+}

@@ -1,0 +1,66 @@
+.mv-brand__mobile {
+
+    /* ==========================================
+    BRANDING
+    ========================================== */
+
+    .mv-brand__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        color: inherit;
+        text-decoration: none;
+    }
+
+    /* Bildmarke */
+
+    .mv-brand__logo {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .mv-brand__logo img {
+        display: block;
+        width: 90px;
+        height: auto;
+    }
+
+    /* Wortmarke und Slogan */
+
+    .mv-brand__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+
+    /* maaVojo */
+
+    .mv-brand__wordmark {
+        display: inline-flex;
+        align-items: baseline;
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .mv-brand__first {
+        color: var(--mv-warm-white);
+    }
+
+    .mv-brand__second {
+        color: var(--mv-gold-light);
+    }
+
+    /* Slogan */
+
+    .mv-slogan {
+        display: block;
+        font-size: 0.85rem;
+        line-height: 1.3;
+        color: var(--mv-ivory);
+        white-space: nowrap;
+        margin-left: -2rem;
+    }
+}

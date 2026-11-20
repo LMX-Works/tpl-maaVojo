@@ -1,0 +1,31 @@
+
+{
+    "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+    "name": "tpl_maavojo",
+    "version": "0.1.0",
+    "description": "Web Assets für das maaVojo Template",
+    "assets": [
+        {
+            "name": "wiwento.style",
+            "type": "style",
+            "uri": "media/templates/site/maavojo/vendor/wiwento/css/wiwento.min.css"
+                   
+        },
+        {
+            "name": "maavojo.style",
+            "type": "style",
+            "uri": "media/templates/site/maavojo/css/template.css",
+            "dependencies": [
+                "wiwento.style"
+            ]
+        },
+        {
+            "name": "maavojo.script",
+            "type": "script",
+            "uri": "media/templates/site/maavojo/js/maavojo-init.mjs",
+            "attributes": {
+                "type": "module"
+            }
+        }
+    ]
+}

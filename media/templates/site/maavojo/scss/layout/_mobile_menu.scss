@@ -1,0 +1,52 @@
+// ==========================================
+// MENU TOGGLE – maaVojo Branding
+// ==========================================
+
+.site-header {
+
+    .wiw-menu-toggle {
+
+        // Markenfarben
+        color: var(--mv-ivory);
+        background-color: transparent;
+        border-color: var(--mv-brass);
+
+        // Hover
+        &:hover {
+            background-color: var(--mv-forest-light);
+            opacity: 1;
+        }
+    }
+}
+
+.wiw-offcanvas__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    border: 1px solid var(--mv-border-color, #dedede);
+    border-radius: 6px;
+
+    background: transparent;
+    color: inherit;
+
+    font-family: inherit;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+
+    &:hover {
+        background: var(--mv-color-surface-hover, #f0f0f0);
+    }
+
+    &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+    }
+}

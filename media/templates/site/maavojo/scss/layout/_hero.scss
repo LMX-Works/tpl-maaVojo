@@ -1,0 +1,84 @@
+// ==========================================
+// HERO
+// ==========================================
+
+.site-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 15rem;
+    background-color: var(--mv-forest);
+    background-image: url("/media/templates/site/maavojo/images/berglandschaft_b40.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-site__eyebrow,
+.hero-site__title,
+.hero-site__description {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .site-hero {
+        // Dunkle, diagonale Grünfläche über dem Hintergrundbild
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(
+                100deg,
+                rgba(0, 26, 21, 0.98) 0%,
+                rgba(1, 51, 43, 0.94) 48%,
+                rgba(1, 51, 43, 0.72) 65%,
+                transparent 100%
+            );
+            clip-path: polygon(
+                0 0,
+                53% 0,
+                38% 100%,
+                0 100%
+            );
+        }
+    }
+
+    .hero-site {
+        &__main {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 560px;
+            height: 25rem;
+            color: var(--mv-ivory);
+        }
+
+        &__eyebrow {
+            letter-spacing: var(--wiw-spacing-1);
+        }
+        
+        &__title {
+            width: 25rem;
+        }
+
+        &__description {
+            width: 30rem;
+        }
+
+        &__title_fir {
+            color: var(--mv-warm-white);
+        }
+
+        &__title_sec {
+            color: var(--mv-gold-light);
+        }
+    }
+
+    .hero-site__eyebrow,
+    .hero-site__title,
+    .hero-site__description {
+        display: block;
+    }
+}

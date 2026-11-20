@@ -1,0 +1,31 @@
+# Standardmäßig alles ausschließen
+/*
+
+# Git-Konfiguration und Dokumentation
+!.gitignore
+!README.md
+
+# Joomla-Template freigeben
+!/templates/
+/templates/*
+!/templates/maavojo/
+
+# Zugehörige Template-Medien freigeben
+!/media/
+/media/*
+!/media/templates/
+/media/templates/*
+!/media/templates/site/
+/media/templates/site/*
+!/media/templates/site/maavojo/
+
+# Lokale Entwicklungsdateien ausschließen
+.vscode/
+.idea/
+.env
+.env.*
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
+*.css.map

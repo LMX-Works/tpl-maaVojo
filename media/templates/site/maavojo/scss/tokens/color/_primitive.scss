@@ -1,0 +1,49 @@
+
+/*
+ * maaVojo – primitive Colors
+ * Version: 0.1.0
+ *
+ * Primitive Farben für das maaJovo Theme
+ *
+ */
+
+ :root {
+
+// Dunkle Farbtöne
+
+    // Primärfarben
+    --mv-forest:            #08382A;
+    --mv-forest-light:      #04362C;
+    --mv-forest-mid:        #013129;
+    --mv-forest-deep:       #173A32;
+
+    // Dunkle Akzentfarben
+    --mv-graphite:          #302D27;
+    --mv-bronze:            #73450A;
+    --mv-black:             #09090b;
+    
+// Mittel Farbentöne
+
+    // Goldtöne
+    --mv-gold:              #C48505;
+    --mv-gold-light:        #E3A80C;
+    --mv-gold-antique:      #9E6305;
+    --mv-champagne:         #EBC14D;
+    --mv-brass:             #B38844;
+
+// Grüntöne
+    --mv-moss:              #547367;
+
+// Warm Neutral
+    --mv-warm-neutral-100: #E9E6DE;
+    --mv-warm-neutral-200: #D9D6CD;
+    --mv-warm-neutral-500: #77736B;
+
+// Helle Farbtöne   
+   
+    --mv-ivory:             #F7F5EF;
+    --mv-sand:              #EAD49D;
+    --mv-white:             #FFFFFF;
+    --mv-warm-white:        #FAF9F5;
+
+}

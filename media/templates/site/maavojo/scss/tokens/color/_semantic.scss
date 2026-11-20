@@ -1,0 +1,73 @@
+
+/*
+ * maaVojo – Semantic Colors
+ * Version: 0.1.0
+ *
+ * Semantische Farbzuweisungen
+ * Die Werte referenzieren die primitive Farbpalette.
+ */
+
+// ============================================
+// TEXT
+// ============================================
+
+:root{
+
+  --mv-text-primary:        var(--mv-graphite);
+  --mv-text-secondary:      var(--mv-forest);
+  --mv-text-muted: var(--mv-warm-neutral-500);
+
+  --mv-text-inverse:        var(--mv-ivory);
+  --mv-text-link:           var(--mv-gold);
+  --mv-text-link-hover:     var(--mv-gold-light);
+
+  --mv-footer-text:         var(--mv-ivory);  
+
+// ============================================
+// BACKGROUND
+// ============================================
+
+  --mv-bg-primary:          var(--mv-ivory);
+  --mv-bg-secondary:        var(--mv-warm-white);
+  --mv-bg-inverse:          var(--mv-forest);
+  --mv-bg-accent:           var(--mv-forest-light);
+
+// ============================================
+// SURFACE
+// ============================================
+
+--mv-surface-primary:       var(--mv-warm-white);
+  --mv-surface-secondary:   var(--mv-ivory);
+  --mv-surface-inverse:     var(--mv-forest);
+  --mv-surface-accent:      var(--mv-forest-light);
+
+// ============================================
+// BORDER
+// ============================================
+
+--mv-border-default: var(--mv-warm-neutral-200);
+--mv-border-subtle: var(--mv-warm-neutral-100);
+--mv-border-strong: var(--mv-forest);
+--mv-border-accent: var(--mv-gold-light);
+
+
+// ============================================
+// ACTION
+// ============================================
+
+  --mv-action-primary:          var(--mv-forest);
+  --mv-action-primary-hover:    var(--mv-forest-light);
+  --mv-action-secondary:        var(--mv-gold);
+  --mv-action-secondary-hover:  var(--mv-gold-light);
+
+  --mv-action-disabled: #B8B5AC;
+
+// ============================================
+// FEEDBACK
+// ============================================
+
+  --mv-feedback-success:        #287A50;
+  --mv-feedback-warning:        #B7791F;
+  --mv-feedback-error:          #B42318;
+  --mv-feedback-info:           #276678;
+}

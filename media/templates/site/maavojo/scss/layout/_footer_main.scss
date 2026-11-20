@@ -1,0 +1,49 @@
+// ==========================================
+// FOOTER MAIN
+// ==========================================
+
+.site-footer {
+    margin-top: auto;
+}
+
+.site-footer__main {
+    color: var(--mv-ivory);
+    background: linear-gradient(
+        100deg,
+        #001a15 0%,
+        #01332b 55%,
+        #03251f 100%
+    );
+    border-bottom: 1px solid var(--mv-moss);
+}
+
+.site-footer__brand {
+    display: flex;
+    justify-content: center;
+    padding-block: 1rem;
+    border-bottom: 1px solid var(--mv-moss);
+
+    a img {
+        width: 90px;
+        height: auto;
+    }
+}
+
+.site-footer__icons {
+    display: flex;
+    justify-content: center;
+}
+
+.mv-social__icongit img {
+    width: 48px;
+}
+
+@media (min-width: 992px) {
+    .site-footer__brand {
+        border-bottom: none;
+
+        a img {
+            width: 130px;
+        }
+    }
+}

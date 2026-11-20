@@ -1,0 +1,604 @@
+@charset "UTF-8";
+/**
+ * ============================================================
+ * @package     maaVojo
+ * @version     0.1.0
+ * @author      maaVojo
+ * ============================================================
+ */
+/* =========================================
+   maavojo – Font Definitions
+   ========================================= */
+/* =========================================
+Font: Manrope
+========================================= */
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope/manrope-v23-latin-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope/manrope-v23-latin-300.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope/manrope-v23-latin-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope/manrope-v23-latin-500.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope/manrope-v23-latin-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope/manrope-v23-latin-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+/* =========================================
+   Font: Source Sans 3
+   ========================================= */
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3/source-sans-3-v20-latin-200.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3/source-sans-3-v20-latin-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3/source-sans-3-v20-latin-500.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3/source-sans-3-v20-latin-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3/source-sans-3-v20-latin-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+/*
+ * maaVojo – primitive Colors
+ * Version: 0.1.0
+ *
+ * Primitive Farben für das maaJovo Theme
+ *
+ */
+:root {
+  --mv-forest: #08382A;
+  --mv-forest-light: #04362C;
+  --mv-forest-mid: #013129;
+  --mv-forest-deep: #173A32;
+  --mv-graphite: #302D27;
+  --mv-bronze: #73450A;
+  --mv-black: #09090b;
+  --mv-gold: #C48505;
+  --mv-gold-light: #E3A80C;
+  --mv-gold-antique: #9E6305;
+  --mv-champagne: #EBC14D;
+  --mv-brass: #B38844;
+  --mv-moss: #547367;
+  --mv-warm-neutral-100: #E9E6DE;
+  --mv-warm-neutral-200: #D9D6CD;
+  --mv-warm-neutral-500: #77736B;
+  --mv-ivory: #F7F5EF;
+  --mv-sand: #EAD49D;
+  --mv-white: #FFFFFF;
+  --mv-warm-white: #FAF9F5;
+}
+
+/*
+ * maaVojo – Semantic Colors
+ * Version: 0.1.0
+ *
+ * Semantische Farbzuweisungen
+ * Die Werte referenzieren die primitive Farbpalette.
+ */
+:root {
+  --mv-text-primary: var(--mv-graphite);
+  --mv-text-secondary: var(--mv-forest);
+  --mv-text-muted: var(--mv-warm-neutral-500);
+  --mv-text-inverse: var(--mv-ivory);
+  --mv-text-link: var(--mv-gold);
+  --mv-text-link-hover: var(--mv-gold-light);
+  --mv-footer-text: var(--mv-ivory);
+  --mv-bg-primary: var(--mv-ivory);
+  --mv-bg-secondary: var(--mv-warm-white);
+  --mv-bg-inverse: var(--mv-forest);
+  --mv-bg-accent: var(--mv-forest-light);
+  --mv-surface-primary: var(--mv-warm-white);
+  --mv-surface-secondary: var(--mv-ivory);
+  --mv-surface-inverse: var(--mv-forest);
+  --mv-surface-accent: var(--mv-forest-light);
+  --mv-border-default: var(--mv-warm-neutral-200);
+  --mv-border-subtle: var(--mv-warm-neutral-100);
+  --mv-border-strong: var(--mv-forest);
+  --mv-border-accent: var(--mv-gold-light);
+  --mv-action-primary: var(--mv-forest);
+  --mv-action-primary-hover: var(--mv-forest-light);
+  --mv-action-secondary: var(--mv-gold);
+  --mv-action-secondary-hover: var(--mv-gold-light);
+  --mv-action-disabled: #B8B5AC;
+  --mv-feedback-success: #287A50;
+  --mv-feedback-warning: #B7791F;
+  --mv-feedback-error: #B42318;
+  --mv-feedback-info: #276678;
+}
+
+:root {
+  /* Font Families */
+  --mv-font-heading: 'Manrope', sans-serif;
+  --mv-font-body: 'Source Sans 3', sans-serif;
+  /* Font Weights */
+  --mv-font-weight-light: 300;
+  --mv-font-weight-regular: 400;
+  --mv-font-weight-medium: 500;
+  --mv-font-weight-semibold: 600;
+  --mv-font-weight-bold: 700;
+}
+
+/* =========================================
+   maavojo – Typography
+   ========================================= */
+/* Grundtypografie */
+body {
+  font-family: var(--mv-font-body);
+  font-weight: var(--mv-font-weight-regular);
+}
+
+/* Überschriften */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--mv-font-heading);
+  font-weight: var(--mv-font-weight-semibold);
+}
+
+/* Fließtext */
+p,
+li,
+blockquote {
+  font-family: var(--mv-font-body);
+}
+
+/* Navigation */
+.site-header__navigation,
+.footer-navigation {
+  font-family: var(--mv-font-body);
+  font-weight: var(--mv-font-weight-medium);
+}
+
+/* Branding */
+.mv-brand__first,
+.mv-brand__second,
+.mv-fob-brand-first,
+.v-fob-brand-second {
+  font-family: var(--mv-font-heading);
+  font-weight: var(--mv-font-weight-bold);
+}
+
+.footer__heading {
+  font-family: var(--mv-font-heading);
+}
+
+.hero-site__title_fir {
+  font-family: var(--mv-font-heading);
+  font-weight: var(--mv-font-weight-semibold);
+}
+
+body {
+  background-color: var(--mv-warm-white);
+}
+
+.site-header {
+  min-height: 80px;
+  background: linear-gradient(100deg, #001a15 0%, #01332b 55%, #03251f 100%);
+  color: var(--mv-ivory);
+  border-bottom: 1px solid var(--mv-moss);
+}
+.site-header__main {
+  min-height: 80px;
+}
+.site-header__brand--mobile {
+  display: block;
+}
+.site-header__brand--desktop {
+  display: none;
+}
+.site-header__search-toggle {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .site-header__brand--mobile {
+    display: none;
+  }
+  .site-header__brand--desktop {
+    display: block;
+  }
+  .site-header__search-toggle {
+    display: block;
+    background-color: transparent;
+    color: var(--mv-ivory);
+    border: 1px solid var(--mv-border-accent);
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+.site-header__top {
+  height: 1.5rem;
+  background-color: var(--mv-black);
+  border-bottom: 1px solid var(--mv-moss);
+}
+
+.mv-brand__link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--mv-ivory);
+  font-size: 2rem;
+  line-height: 1;
+  text-decoration: none;
+}
+.mv-brand__logo {
+  display: flex;
+  align-items: center;
+}
+.mv-brand__logo img {
+  width: 90px;
+  height: auto;
+}
+.mv-brand__first {
+  color: var(--mv-warm-white);
+}
+.mv-brand__second {
+  color: var(--mv-gold-light);
+}
+
+.mv-brand__mobile {
+  /* ==========================================
+  BRANDING
+  ========================================== */
+}
+.mv-brand__mobile .mv-brand__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+.mv-brand__mobile {
+  /* Bildmarke */
+}
+.mv-brand__mobile .mv-brand__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.mv-brand__mobile .mv-brand__logo img {
+  display: block;
+  width: 90px;
+  height: auto;
+}
+.mv-brand__mobile {
+  /* Wortmarke und Slogan */
+}
+.mv-brand__mobile .mv-brand__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+.mv-brand__mobile {
+  /* maaVojo */
+}
+.mv-brand__mobile .mv-brand__wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  font-size: 2rem;
+  line-height: 1;
+}
+.mv-brand__mobile .mv-brand__first {
+  color: var(--mv-warm-white);
+}
+.mv-brand__mobile .mv-brand__second {
+  color: var(--mv-gold-light);
+}
+.mv-brand__mobile {
+  /* Slogan */
+}
+.mv-brand__mobile .mv-slogan {
+  display: block;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: var(--mv-ivory);
+  white-space: nowrap;
+  margin-left: -2rem;
+}
+
+.site-header .wiw-menu-toggle {
+  color: var(--mv-ivory);
+  background-color: transparent;
+  border-color: var(--mv-brass);
+}
+.site-header .wiw-menu-toggle:hover {
+  background-color: var(--mv-forest-light);
+  opacity: 1;
+}
+
+.wiw-offcanvas__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--mv-border-color, #dedede);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+}
+.wiw-offcanvas__close:hover {
+  background: var(--mv-color-surface-hover, #f0f0f0);
+}
+.wiw-offcanvas__close:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.site-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 15rem;
+  background-color: var(--mv-forest);
+  background-image: url("/media/templates/site/maavojo/images/berglandschaft_b40.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-site__eyebrow,
+.hero-site__title,
+.hero-site__description {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .site-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(100deg, rgba(0, 26, 21, 0.98) 0%, rgba(1, 51, 43, 0.94) 48%, rgba(1, 51, 43, 0.72) 65%, transparent 100%);
+    clip-path: polygon(0 0, 53% 0, 38% 100%, 0 100%);
+  }
+  .hero-site__main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 560px;
+    height: 25rem;
+    color: var(--mv-ivory);
+  }
+  .hero-site__eyebrow {
+    letter-spacing: var(--wiw-spacing-1);
+  }
+  .hero-site__title {
+    width: 25rem;
+  }
+  .hero-site__description {
+    width: 30rem;
+  }
+  .hero-site__title_fir {
+    color: var(--mv-warm-white);
+  }
+  .hero-site__title_sec {
+    color: var(--mv-gold-light);
+  }
+  .hero-site__eyebrow,
+  .hero-site__title,
+  .hero-site__description {
+    display: block;
+  }
+}
+.vjo-navigation-first {
+  list-style-type: none;
+  font-size: larger;
+  margin-bottom: var(--wiw-spacing-0);
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-footer {
+  margin-top: auto;
+}
+
+.site-footer__main {
+  color: var(--mv-ivory);
+  background: linear-gradient(100deg, #001a15 0%, #01332b 55%, #03251f 100%);
+  border-bottom: 1px solid var(--mv-moss);
+}
+
+.site-footer__brand {
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--mv-moss);
+}
+.site-footer__brand a img {
+  width: 90px;
+  height: auto;
+}
+
+.site-footer__icons {
+  display: flex;
+  justify-content: center;
+}
+
+.mv-social__icongit img {
+  width: 48px;
+}
+
+@media (min-width: 992px) {
+  .site-footer__brand {
+    border-bottom: none;
+  }
+  .site-footer__brand a img {
+    width: 130px;
+  }
+}
+.site-footer__navigation-area {
+  padding-block: 1rem;
+}
+.site-footer__navigation-area > .wiw-grid {
+  row-gap: 1.5rem;
+}
+
+.footer-navigation {
+  min-width: 0;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 2rem;
+}
+.footer-navigation ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: none;
+}
+
+.footer__heading {
+  width: 6rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+.site-footer__icons {
+  padding-block: 1rem;
+}
+
+@media (min-width: 992px) {
+  .footer-navigation {
+    display: block;
+  }
+}
+.site-footer__bottom {
+  padding-block: 0.25rem;
+  background-color: var(--mv-black);
+  color: var(--mv-footer-text);
+}
+.site-footer__bottom p {
+  margin-block: var(--wiw-spacing-1);
+  font-size: smaller;
+}
+.site-footer__bottom .wiw-grid {
+  gap: var(--wiw-spacing-0);
+}
+
+.mv-fob-brand-first,
+.mv-fob-brand-second {
+  font-weight: 700;
+}
+
+.mv-fob-brand-second {
+  color: var(--mv-gold-light);
+}
+
+.mv-footer__copyright,
+.mv-footer__developed,
+.mv-footer__version {
+  text-align: center;
+}
+
+.mv-footer__heart {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-inline: 0.15rem;
+  padding-bottom: 0.3rem;
+}
+.mv-footer__heart svg {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.mv-footer__copyright-col {
+  order: 1;
+}
+
+.mv-footer__developed-col {
+  order: 2;
+}
+
+.mv-footer__version-col {
+  order: 3;
+}
+
+@media (min-width: 768px) {
+  .mv-footer__developed-col {
+    order: 3;
+  }
+  .mv-footer__version-col {
+    order: 2;
+  }
+  .mv-footer__copyright {
+    text-align: start;
+  }
+  .mv-footer__developed {
+    text-align: end;
+  }
+}/*# sourceMappingURL=template.css.map */

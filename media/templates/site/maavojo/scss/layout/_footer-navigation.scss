@@ -1,0 +1,42 @@
+// ==========================================
+// FOOTER NAVIGATION
+// ==========================================
+
+.site-footer__navigation-area {
+    padding-block: 1rem;
+
+    > .wiw-grid {
+        row-gap: 1.5rem;
+    }
+}
+
+.footer-navigation {
+    min-width: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem;
+
+    ul {
+        margin: 0;
+        padding-left: 1.25rem;
+        list-style: none;
+    }
+}
+
+.footer__heading {
+    width: 6rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    font-weight: 600;
+}
+
+// Icon Bar
+.site-footer__icons {
+    padding-block: 1rem;
+}
+
+@media (min-width: 992px) {
+    .footer-navigation {
+        display: block;
+    }
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    ============================================================
+    @package     maaVojo
+    @version     0.1.0
+    @author      maaVojo
+    @copyright   Copyright (C) 2026 maaVojo
+    @license     GNU General Public License version 2 or later;
+                 see LICENSE
+    ============================================================
+-->
+
+<extension type="template" client="site" method="upgrade">
+
+    <name>maavojo</name>
+    <version>0.1.0</version>
+    <creationDate>2026-11</creationDate>
+
+    <author>maaVojo</author>
+    <copyright>Copyright (C) 2026 maaVojo</copyright>
+
+    <description>
+        Eigenständiges Joomla-Site-Template für maaVojo.
+    </description>
+
+    <files>
+        <filename>index.php</filename>
+        <filename>index.html</filename>
+        <filename>index_vorlage.php</filename>
+        <filename>joomla.asset.json</filename>
+        <filename>templateDetails.xml</filename>
+
+        <folder>includes</folder>
+    </files>
+
+    <media destination="templates/site/maavojo" folder="media">
+        <folder>css</folder>
+        <folder>fonts</folder>
+        <folder>icons_svg</folder>
+        <folder>icons_webp</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>scss</folder>
+        <folder>vendor</folder>
+    </media>
+
+    <positions>
+        <position>topbar</position>
+        <position>menu</position>
+        <position>search</position>
+        <position>main-top</position>
+        <position>main-bottom</position>
+        <position>footer</position>
+        <position>offcanvas</position>
+    </positions>
+
+</extension>

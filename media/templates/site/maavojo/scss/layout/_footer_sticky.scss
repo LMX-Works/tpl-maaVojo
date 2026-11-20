@@ -1,0 +1,15 @@
+// ==========================================
+// PAGE LAYOUT – Sticky Footer
+// ==========================================
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+}

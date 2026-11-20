@@ -1,0 +1,56 @@
+// ==========================================
+// HEADER
+// ==========================================
+
+.site-header {
+    min-height: 80px;
+    background: linear-gradient(
+        100deg,
+        #001a15 0%,
+        #01332b 55%,
+        #03251f 100%
+    );
+    color: var(--mv-ivory);
+    border-bottom: 1px solid var(--mv-moss);
+
+    &__main {
+        min-height: 80px;
+    }
+
+    &__brand {
+        &--mobile {
+            display: block;
+        }
+
+        &--desktop {
+            display: none;
+        }
+    }
+
+    &__search-toggle {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .site-header {
+        &__brand {
+            &--mobile {
+                display: none;
+            }
+
+            &--desktop {
+                display: block;
+            }
+        }
+
+        &__search-toggle {
+            display: block;
+            background-color: transparent;
+            color: var(--mv-ivory);
+            border: 1px solid var(--mv-border-accent);
+            padding: 5px;
+            border-radius: 5px;
+        }
+    }
+}
