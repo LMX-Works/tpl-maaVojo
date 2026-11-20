@@ -92,6 +92,8 @@ $wa->useScript('maavojo.script');
 
                 <nav
                     class="site-header__navigation wiw-col-md-8 wiw-hidden-below-md"
+                    data-wiw-nav
+                    data-wiw-current="auto"
                     aria-label="Hauptnavigation"
                 >
 
@@ -254,13 +256,38 @@ $wa->useScript('maavojo.script');
 
         <div class="wiw-container">
 
-            <section class="site-main__section">
+            <div class="site-main__layout wiw-grid">
 
-                <jdoc:include type="message" />
+                <!-- Sidebar Navigation -->
 
-                <jdoc:include type="component" />
+                <aside
+                    class="site-sidebar wiw-col-12 wiw-col-md-3"
+                    aria-label="Seitennavigation"
+                >
 
-            </section>
+                    <nav
+                        class="site-sidebar__navigation"
+                        data-wiw-nav
+                        data-wiw-current="auto"
+                        aria-label="Seitennavigation"
+                    >
+                        <jdoc:include type="modules" name="sidebar" style="none" />
+                    </nav>
+
+                </aside>
+
+
+                <!-- Main Content -->
+
+                <section class="site-main__section site-main__content wiw-col-12 wiw-col-md-9">
+
+                    <jdoc:include type="message" />
+
+                    <jdoc:include type="component" />
+
+                </section>
+
+            </div>
 
         </div>
 

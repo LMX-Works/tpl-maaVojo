@@ -1,9 +1,153 @@
-.vjo-navigation-first{
 
-    list-style-type: none;
-    font-size: larger;
+/**
+ * ============================================================
+ * maaVojo – Navigation
+ * ============================================================
+ *
+ * Version: 0.1.0
+ *
+ * Gemeinsame Joomla-Menüstruktur für:
+ * - Desktopnavigation
+ * - Sidebar
+ * - WIWENTO Offcanvas
+ *
+ * ============================================================
+ */
 
-    margin-bottom: var(--wiw-spacing-0);
+
+/* ============================================================
+   Gemeinsame Navigation
+   ============================================================ */
+
+.site-header__navigation,
+.site-sidebar__navigation,
+.wiw-offcanvas__nav {
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+
+    }
+
+    .wiw-nav__item {
+        position: relative;
+    }
+
+    .wiw-nav__item-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .wiw-nav__link {
+        display: block;
+    }
+
+    .wiw-nav__toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+}
+
+
+/* ============================================================
+   Desktopnavigation – horizontal
+   ============================================================ */
+
+.site-header__navigation {
+
+    .wiw-nav__list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        
+    }
+
+    .wiw-nav__item-header {
+        gap: 0.35rem;
+    }
+
+    .wiw-nav__link {
+        padding-block: 0.75rem;
+        font-size: 1.25rem;
+        white-space: nowrap;
+        color:var(--mv-warm-white);
+        
+    }
+
     
+    .wiw-nav__link:hover,
+    .wiw-nav__link:focus-visible {
+        color: var(--mv-gold-light);
+    }
 
+
+    .wiw-nav__link.is-current {
+        color: var(--mv-forest-deep);
+    }
+
+    .wiw-nav__toggle {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    /* Desktop-Dropdown */
+
+    .wiw-nav__submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        min-width: 14rem;
+        padding: 0.5rem;
+        background: var(--mv-forest-deep);
+        border: 1px solid var(--mv-moss);
+        border-radius: 0.35rem;
+    }
+
+    .wiw-nav__submenu .wiw-nav__item-header {
+        width: 100%;
+    }
+
+    .wiw-nav__submenu .wiw-nav__link {
+        width: 100%;
+        padding: 0.65rem 0.75rem;
+        font-size: 1rem;
+        
+    }
+
+    .wiw-nav__submenu .wiw-nav__link:hover,
+    .wiw-nav__submenu .wiw-nav__link:focus-visible {
+        color: var(--mv-gold-light);
+        background-color: rgb(255 255 255 / 8%);
+    }
+
+    .wiw-nav__toggle {
+        color: var(--mv-warm-white);
+    }
+}
+
+
+/* ============================================================
+   Tastaturbedienung
+   ============================================================ */
+
+.site-header__navigation,
+.site-sidebar__navigation,
+.wiw-offcanvas__nav {
+
+    a:focus-visible,
+    button:focus-visible {
+        outline: 2px solid var(--mv-gold-light);
+        outline-offset: 3px;
+    }
 }

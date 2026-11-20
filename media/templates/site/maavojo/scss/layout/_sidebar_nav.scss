@@ -1,0 +1,115 @@
+
+/**
+ * ============================================================
+ * maaVojo – Sidebar Navigation
+ * ============================================================
+ *
+ * Version: 0.1.0
+ *
+ * Vertikale Seitennavigation auf Basis der
+ * gemeinsamen WIWENTO-Menüstruktur.
+ *
+ * ============================================================
+ */
+
+
+/* ============================================================
+   Sidebar – Grundstruktur
+   ============================================================ */
+
+.site-sidebar__navigation {
+
+    .wiw-nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+    }
+
+    .wiw-nav__item {
+        width: 100%;
+    }
+
+    .wiw-nav__item-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+
+    /* --------------------------------------------------------
+       Menülinks
+       -------------------------------------------------------- */
+
+    .wiw-nav__link {
+        flex: 1;
+        display: block;
+        padding: 0.65rem 1rem;
+
+        color: var(--mv-forest-deep);
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    .wiw-nav__link:hover,
+    .wiw-nav__link:focus-visible {
+        color: var(--mv-gold-light);
+    }
+
+    .wiw-nav__link.is-current {
+        color: var(--mv-forest-deep);
+        font-weight: 700;
+    }
+
+
+    /* --------------------------------------------------------
+       Menüschalter
+       -------------------------------------------------------- */
+
+    .wiw-nav__toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        min-width: 44px;
+        min-height: 44px;
+
+        padding: 0.5rem;
+        border: 0;
+        background: transparent;
+
+        color: var(--mv-forest-deep);
+        cursor: pointer;
+    }
+
+
+    /* --------------------------------------------------------
+       Untermenüs
+       -------------------------------------------------------- */
+
+    .wiw-nav__submenu {
+        position: static;
+        display: block;
+
+        width: 100%;
+        margin: 0 0 0 1rem;
+        padding: 0 0 0 0.75rem;
+
+        border-left: 1px solid var(--mv-moss);
+    }
+
+    .wiw-nav__submenu[hidden] {
+        display: none !important;
+    }
+
+    .wiw-nav__submenu .wiw-nav__link {
+        padding: 0.55rem 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .wiw-nav__submenu .wiw-nav__submenu {
+        margin-left: 0.5rem;
+    }
+}

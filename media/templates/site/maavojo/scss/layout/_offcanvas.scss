@@ -1,0 +1,49 @@
+
+/* ============================================================
+   Offcanvasnavigation – vertikal
+   ============================================================ */
+
+.wiw-offcanvas__nav {
+
+    .wiw-nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .wiw-nav__item-header {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .wiw-nav__link {
+        flex: 1;
+        padding: 0.85rem 1rem;
+        font-size: 1.1rem;
+        color: var(--mv-forest-deep);
+    }
+
+    .wiw-nav__link:hover,
+    .wiw-nav__link:focus-visible {
+        color: var(--mv-gold-light);
+    }
+
+    .wiw-nav__toggle {
+        min-width: 44px;
+        min-height: 44px;
+        font-size: 1.2rem;
+        color: var(--mv-forest-deep);
+    }
+
+    .wiw-nav__submenu {
+        position: static;
+        padding-left: 1rem;
+        border-left: 1px solid var(--mv-moss);
+        margin-left: 1rem;
+    }
+
+    .wiw-nav__submenu .wiw-nav__link {
+        font-size: 1rem;
+    }
+}

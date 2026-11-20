@@ -353,41 +353,6 @@ body {
   margin-left: -2rem;
 }
 
-.site-header .wiw-menu-toggle {
-  color: var(--mv-ivory);
-  background-color: transparent;
-  border-color: var(--mv-brass);
-}
-.site-header .wiw-menu-toggle:hover {
-  background-color: var(--mv-forest-light);
-  opacity: 1;
-}
-
-.wiw-offcanvas__close {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: 1px solid var(--mv-border-color, #dedede);
-  border-radius: 6px;
-  background: transparent;
-  color: inherit;
-  font-family: inherit;
-  font-size: 30px;
-  font-weight: 300;
-  line-height: 1;
-  cursor: pointer;
-}
-.wiw-offcanvas__close:hover {
-  background: var(--mv-color-surface-hover, #f0f0f0);
-}
-.wiw-offcanvas__close:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 3px;
-}
-
 .site-hero {
   position: relative;
   isolation: isolate;
@@ -445,10 +410,265 @@ body {
     display: block;
   }
 }
-.vjo-navigation-first {
-  list-style-type: none;
-  font-size: larger;
-  margin-bottom: var(--wiw-spacing-0);
+/**
+ * ============================================================
+ * maaVojo – Navigation
+ * ============================================================
+ *
+ * Version: 0.1.0
+ *
+ * Gemeinsame Joomla-Menüstruktur für:
+ * - Desktopnavigation
+ * - Sidebar
+ * - WIWENTO Offcanvas
+ *
+ * ============================================================
+ */
+/* ============================================================
+   Gemeinsame Navigation
+   ============================================================ */
+.site-header__navigation ul,
+.site-sidebar__navigation ul,
+.wiw-offcanvas__nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-header__navigation a,
+.site-sidebar__navigation a,
+.wiw-offcanvas__nav a {
+  text-decoration: none;
+}
+.site-header__navigation .wiw-nav__item,
+.site-sidebar__navigation .wiw-nav__item,
+.wiw-offcanvas__nav .wiw-nav__item {
+  position: relative;
+}
+.site-header__navigation .wiw-nav__item-header,
+.site-sidebar__navigation .wiw-nav__item-header,
+.wiw-offcanvas__nav .wiw-nav__item-header {
+  display: flex;
+  align-items: center;
+}
+.site-header__navigation .wiw-nav__link,
+.site-sidebar__navigation .wiw-nav__link,
+.wiw-offcanvas__nav .wiw-nav__link {
+  display: block;
+}
+.site-header__navigation .wiw-nav__toggle,
+.site-sidebar__navigation .wiw-nav__toggle,
+.wiw-offcanvas__nav .wiw-nav__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* ============================================================
+   Desktopnavigation – horizontal
+   ============================================================ */
+.site-header__navigation .wiw-nav__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.site-header__navigation .wiw-nav__item-header {
+  gap: 0.35rem;
+}
+.site-header__navigation .wiw-nav__link {
+  padding-block: 0.75rem;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  color: var(--mv-warm-white);
+}
+.site-header__navigation .wiw-nav__link:hover,
+.site-header__navigation .wiw-nav__link:focus-visible {
+  color: var(--mv-gold-light);
+}
+.site-header__navigation .wiw-nav__link.is-current {
+  color: var(--mv-forest-deep);
+}
+.site-header__navigation .wiw-nav__toggle {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.site-header__navigation {
+  /* Desktop-Dropdown */
+}
+.site-header__navigation .wiw-nav__submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  min-width: 14rem;
+  padding: 0.5rem;
+  background: var(--mv-forest-deep);
+  border: 1px solid var(--mv-moss);
+  border-radius: 0.35rem;
+}
+.site-header__navigation .wiw-nav__submenu .wiw-nav__item-header {
+  width: 100%;
+}
+.site-header__navigation .wiw-nav__submenu .wiw-nav__link {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font-size: 1rem;
+}
+.site-header__navigation .wiw-nav__submenu .wiw-nav__link:hover,
+.site-header__navigation .wiw-nav__submenu .wiw-nav__link:focus-visible {
+  color: var(--mv-gold-light);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.site-header__navigation .wiw-nav__toggle {
+  color: var(--mv-warm-white);
+}
+
+/* ============================================================
+   Tastaturbedienung
+   ============================================================ */
+.site-header__navigation a:focus-visible,
+.site-header__navigation button:focus-visible,
+.site-sidebar__navigation a:focus-visible,
+.site-sidebar__navigation button:focus-visible,
+.wiw-offcanvas__nav a:focus-visible,
+.wiw-offcanvas__nav button:focus-visible {
+  outline: 2px solid var(--mv-gold-light);
+  outline-offset: 3px;
+}
+
+/**
+ * ============================================================
+ * maaVojo – Sidebar Navigation
+ * ============================================================
+ *
+ * Version: 0.1.0
+ *
+ * Vertikale Seitennavigation auf Basis der
+ * gemeinsamen WIWENTO-Menüstruktur.
+ *
+ * ============================================================
+ */
+/* ============================================================
+   Sidebar – Grundstruktur
+   ============================================================ */
+.site-sidebar__navigation .wiw-nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+}
+.site-sidebar__navigation .wiw-nav__item {
+  width: 100%;
+}
+.site-sidebar__navigation .wiw-nav__item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.site-sidebar__navigation {
+  /* --------------------------------------------------------
+     Menülinks
+     -------------------------------------------------------- */
+}
+.site-sidebar__navigation .wiw-nav__link {
+  flex: 1;
+  display: block;
+  padding: 0.65rem 1rem;
+  color: var(--mv-forest-deep);
+  font-size: 1rem;
+  text-decoration: none;
+}
+.site-sidebar__navigation .wiw-nav__link:hover,
+.site-sidebar__navigation .wiw-nav__link:focus-visible {
+  color: var(--mv-gold-light);
+}
+.site-sidebar__navigation .wiw-nav__link.is-current {
+  color: var(--mv-forest-deep);
+  font-weight: 700;
+}
+.site-sidebar__navigation {
+  /* --------------------------------------------------------
+     Menüschalter
+     -------------------------------------------------------- */
+}
+.site-sidebar__navigation .wiw-nav__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem;
+  border: 0;
+  background: transparent;
+  color: var(--mv-forest-deep);
+  cursor: pointer;
+}
+.site-sidebar__navigation {
+  /* --------------------------------------------------------
+     Untermenüs
+     -------------------------------------------------------- */
+}
+.site-sidebar__navigation .wiw-nav__submenu {
+  position: static;
+  display: block;
+  width: 100%;
+  margin: 0 0 0 1rem;
+  padding: 0 0 0 0.75rem;
+  border-left: 1px solid var(--mv-moss);
+}
+.site-sidebar__navigation .wiw-nav__submenu[hidden] {
+  display: none !important;
+}
+.site-sidebar__navigation .wiw-nav__submenu .wiw-nav__link {
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+}
+.site-sidebar__navigation .wiw-nav__submenu .wiw-nav__submenu {
+  margin-left: 0.5rem;
+}
+
+/* ============================================================
+   Offcanvasnavigation – vertikal
+   ============================================================ */
+.wiw-offcanvas__nav .wiw-nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+.wiw-offcanvas__nav .wiw-nav__item-header {
+  justify-content: space-between;
+  width: 100%;
+}
+.wiw-offcanvas__nav .wiw-nav__link {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  font-size: 1.1rem;
+  color: var(--mv-forest-deep);
+}
+.wiw-offcanvas__nav .wiw-nav__link:hover,
+.wiw-offcanvas__nav .wiw-nav__link:focus-visible {
+  color: var(--mv-gold-light);
+}
+.wiw-offcanvas__nav .wiw-nav__toggle {
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.2rem;
+  color: var(--mv-forest-deep);
+}
+.wiw-offcanvas__nav .wiw-nav__submenu {
+  position: static;
+  padding-left: 1rem;
+  border-left: 1px solid var(--mv-moss);
+  margin-left: 1rem;
+}
+.wiw-offcanvas__nav .wiw-nav__submenu .wiw-nav__link {
+  font-size: 1rem;
 }
 
 html {
