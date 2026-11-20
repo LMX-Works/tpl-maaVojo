@@ -93,7 +93,7 @@ $wa->useScript('maavojo.script');
                 <nav
                     class="site-header__navigation wiw-col-md-8 wiw-hidden-below-md"
                     data-wiw-nav
-                    data-wiw-current="auto"
+                    data-wiw-current="manual"
                     aria-label="Hauptnavigation"
                 >
 
@@ -268,7 +268,7 @@ $wa->useScript('maavojo.script');
                     <nav
                         class="site-sidebar__navigation"
                         data-wiw-nav
-                        data-wiw-current="auto"
+                        data-wiw-current="manual"
                         aria-label="Seitennavigation"
                     >
                         <jdoc:include type="modules" name="sidebar" style="none" />
